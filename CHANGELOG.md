@@ -1,6 +1,6 @@
 # CHANGELOG for dynatrace-tcp_socket-plugin
 
-## 1.5.0
+## Version 1.5.0 (2019-12-16)
 
 Initial public release.
 
