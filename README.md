@@ -3,7 +3,7 @@
 This plugin tries to open a tcp socket from a Dynatrace ActiveGate to the ip
 address and port configured. 
 
-It reports an *OK availability event* to Dyntrace if successful, *ERROR* otherwise.
+It reports an *OK availability event* to Dynatrace if successful, *ERROR* otherwise.
 
 ## Installation
 
