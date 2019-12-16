@@ -1,0 +1,115 @@
+{
+    "name": "custom.remote.python.tcp_socket",
+    "version": "1.5.0",
+    "type": "python",
+    "entity": "CUSTOM_DEVICE",
+    "metricGroup": "tech.dbts.Events",
+    "processTypeNames": ["PYTHON"],
+    "technologies": ["TCP connections"],
+    "favicon": "https://lh3.googleusercontent.com/gN6iBKP1b2GTXZZoCxhyXiYIAh8QJ_8xzlhEK6csyDadA4GdkEdIEy9Bc8s5jozt1g=w300",
+    "source": {
+        "package": "tcp_socket",
+        "className": "TcpSocketPluginRemote",
+        "activation": "Remote"
+    },
+    "configUI": {
+        "displayName": "ActiveGate TCP-Sockets Plugin - Events",
+        "properties": [
+        {
+            "key": "device_name",
+            "displayName": "Device Short Name",
+            "displayHint": "tcp_device"
+        },
+        {
+            "key": "device_display_name",
+            "displayName": "Device Display Name",
+            "displayHint": "TCP Device"
+        },
+        {
+            "key": "address",
+            "displayName": "IP Address",
+            "displayHint": "1.2.3.4"
+        },
+        {
+            "key": "port",
+            "displayName": "Port",
+            "displayHint": "1234"
+        }
+        ]
+    },
+    "properties": [
+    {
+        "key": "device_name",
+        "type": "String",
+        "defaultValue": "tcp_device"
+    },
+    {
+        "key": "device_display_name",
+        "type": "String",
+        "defaultValue": "TCP Device"
+    },
+    {
+        "key": "address",
+        "type": "String",
+        "defaultValue": "127.0.0.1"
+    },
+    {
+        "key": "port",
+        "type": "Integer",
+        "defaultValue": 22
+    }
+    ],
+    "metrics": [{
+            "entity": "CUSTOM_DEVICE",
+            "statetimeseries": {
+                "key": "state",
+                "states": [
+                  "OK",
+                  "WARNING",
+                  "ERROR"
+                ],
+                "displayname": "Socket status"
+            }
+        }
+    ],
+    "ui": {
+        "keymetrics": [
+            {
+                "key": "state",
+                "displayname": "Socket status",
+                "statemetric": true
+            }
+        ],
+        "charts": [
+            {
+                "group": "States",
+                "title": "Socket status",
+                "series": [
+                    {
+                        "key": "state",
+                        "displayname": " ",
+                        "seriestype": "bar",
+                        "statecolors": ["#008cdb", "#e98e23", "#c41425"],
+                        "statechart": true
+                    }
+                ]
+            }
+        ],
+        "keycharts": [
+            {
+                "group": "States",
+                "title": "Socket status",
+                "series": [
+                    {
+                        "key": "state",
+                        "displayname": " ",
+                        "seriestype": "bar",
+                        "statecolors": ["#008cdb", "#e98e23", "#c41425"],
+                        "statechart": true
+                    }
+                ]
+            }
+        ]
+
+    }
+}
