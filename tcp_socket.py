@@ -40,7 +40,7 @@ class TcpSocketPluginRemote(RemoteBasePlugin):
 			device.state_metric(key='state', value='ERROR')
 			device.report_availability_event(title="%s unavailable" % (self.device_display_name),
 											 description="Couldn't connect to %s:%d: %s." % (self.address, self.port, e),
-											 properties={"property_key": "property_value"})
+											 properties={"current_timeout": "1s"})
 			logger.info("Couldn't connect to %s:%d: %s." % (self.address, self.port, e))
 
 		finally:
