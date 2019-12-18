@@ -66,3 +66,15 @@ the desired device.
 Currently only states *OK* and *ERROR* are used, *WARNING* is for future use only.
 
 ![Availability chart](img/chart.png "Chart with historical service availability")
+
+## Problem ticket and Alerting
+
+When the plugin reports an error, Dynatrace will automatically open a problem ticket
+as you can see on the problem screen:
+
+![Availability problem](img/problemscreen.png "Dynatrace Problem Screen")
+
+The ticket ties into Dynatrace's powerful alerting system. Just as for any other
+problem Dyntrace detects you can configure it to alert you eg on Slack:
+
+![Slack Alert](img/slackalert.png "Slack Alert")
