@@ -9,6 +9,7 @@ class TcpSocketPluginRemote(RemoteBasePlugin):
 		logger.info("Config: %s", self.config)
 		self.address = self.config["address"]
 		self.port = self.config["port"]
+		self.timeout = self.config["timeout"]
 		self.device_name = self.config["device_name"]
 		self.device_display_name = self.config["device_display_name"]
 
@@ -28,7 +29,7 @@ class TcpSocketPluginRemote(RemoteBasePlugin):
 
 		# Check socket
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		s.settimeout(1)
+		s.settimeout(self.timeout)
 
 		try:
 			s.connect((self.address, self.port))
@@ -40,7 +41,7 @@ class TcpSocketPluginRemote(RemoteBasePlugin):
 			device.state_metric(key='state', value='ERROR')
 			device.report_availability_event(title="%s unavailable" % (self.device_display_name),
 											 description="Couldn't connect to %s:%d: %s." % (self.address, self.port, e),
-											 properties={"current_timeout": "1s"})
+											 properties={"current_timeout": "%ss" % (self.timeout)})
 			logger.info("Couldn't connect to %s:%d: %s." % (self.address, self.port, e))
 
 		finally:

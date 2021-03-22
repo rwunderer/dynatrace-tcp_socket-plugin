@@ -1,5 +1,9 @@
 # CHANGELOG for dynatrace-tcp_socket-plugin
 
+## Version 1.6.0 (2021-03-22)
+
+- Add socket timeout configuration parameter
+
 ## Version 1.5.1 (2019-12-18)
 
 - Include current timeout in problem alert (value is currently hardcoded)
