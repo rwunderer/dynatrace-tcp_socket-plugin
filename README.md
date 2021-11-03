@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/github/license/rwunderer/dynatrace-tcp_socket-plugin.svg)](https://github.com/rwunderer/dynatrace-tcp_socket-plugin/blob/main/LICENSE)
+
 # Simple TCP monitoring plugin for Dynatrace ActiveGate
 
 This plugin tries to open a tcp socket from a Dynatrace ActiveGate to the ip
