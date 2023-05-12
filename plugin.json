@@ -4,7 +4,6 @@
     "type": "python",
     "entity": "CUSTOM_DEVICE",
     "metricGroup": "tech.dbts.Events",
-    "processTypeNames": ["PYTHON"],
     "technologies": ["TCP connections"],
     "favicon": "https://lh3.googleusercontent.com/gN6iBKP1b2GTXZZoCxhyXiYIAh8QJ_8xzlhEK6csyDadA4GdkEdIEy9Bc8s5jozt1g=w300",
     "source": {
